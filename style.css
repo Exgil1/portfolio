@@ -1,0 +1,143 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+  background: #000000;
+  line-height: 1.6;
+}
+
+/* Navbar */
+header {
+  background: #fff;
+  padding: 1rem 5%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0; 
+  z-index: 1000;
+}
+
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: bold; color: #000000; }
+.nav-links { list-style: none; display: flex; gap: 1.5rem; }
+a { text-decoration: none; color: #000000; }
+
+/* Hero with Video Background */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  flex-direction: column;   /* ensures items stack vertically */
+}
+
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;  /* space between title & subtitle */
+}
+
+.hero h2 span { 
+  color: rgb(0, 255, 213); 
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;   /* space between subtitle & button */
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  background: #fff;
+  color: #000000;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-block; /* prevents merging */
+}
+.btn:hover { background: #0078ff; color: #fff; }
+
+section { padding: 4rem 10%; }
+
+/* Profile Section */
+.profile-container {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+}
+.profile-container img {
+  width: 180px; height: 180px;
+  border-radius: 50%; object-fit: cover;
+  border: 4px solid #ffffff; margin-bottom: 1rem;
+  box-shadow: 0 0 20px rgb(0, 255, 166);
+  background-clip: padding-box;
+}
+.profile-container p { max-width: 600px; }
+
+/* Projects */
+.project-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover { 
+  transform: translateY(-5px); 
+  box-shadow: 0 0 30px rgba(0, 255, 166, 0.8); 
+}
+
+.project-img { width: 100%; border-radius: 5px; }
+
+/* Skills */
+.skills-list { display: flex; gap: 1rem; flex-wrap: wrap; }
+.skills-list li {
+  background: #ffffff; color: #000000;
+  padding: 0.5rem 1rem; border-radius: 20px;
+  list-style: none;
+}
+
+/* Contact Links */
+#contact a {
+  color: inherit;         
+  text-decoration: none;  
+  cursor: pointer;        
+}
+
+#contact a:hover {
+  color: #00ffd5;        
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #222; 
+  color: #fff; 
+  text-align: center;
+  padding: 1rem; 
+  margin-top: 2rem;
+}
