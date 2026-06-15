@@ -39,7 +39,7 @@
     <div class="profile-container">
       <img src="image/profile.jpg" alt="Your Profile Picture">
       <h2>About Me</h2>
-      <p>Hello! I’m an IT student passionate about web development and building clean, professional digital experiences. I enjoy learning new technologies and creating projects that solve real-world problems. Currently, I’m focusing on HTML, CSS, JavaScript, and React.</p>
+      <p>Hi, I’m Gilbert Jr. I. Sacay, a self-taught developer with a strong hands-on learning approach, focused on building practical systems and real-world projects. I recently completed my Bachelor of Science in Information Technology (BSIT) degree. </p>
     </div>
   </section>
 
@@ -47,15 +47,35 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="project-grid">
-      <div class="project-card">
+      <div class="project-card" onclick="openProjectModal('calculator')">
         <img src="image/project1.png" alt="Project 1" class="project-img">
         <h3>Project Calculator</h3>
-        <p>full functional Calculator</p>
+        <p>Full functional Calculator</p>
+        <small>Click to view details</small>
       </div>
-      <div class="project-card">
+      <div class="project-card" onclick="openProjectModal('greyroom')">
         <img src="image/project2.png" alt="Project 2" class="project-img">
         <h3>Project GREY ROOM</h3>
-        <p>Game Project about a Man who trap in the grey room and the man doesnt know why he is trap</p>
+        <p>Game Project about a Man trapped in a grey room</p>
+        <small>Click to view details</small>
+      </div>
+      <div class="project-card" onclick="openProjectModal('qms')">
+        <img src="image/project4.png" alt="Project 4" class="project-img">
+        <h3>QMS Application (Capstone)</h3>
+        <p>Comprehensive Queue Management System with real-time monitoring and analytics</p>
+        <small>Click to view details</small>
+      </div>
+      <div class="project-card" onclick="openProjectModal('tourism')">
+        <img src="image/project3.png" alt="Project 3" class="project-img">
+        <h3>Tourism Stakeholder Registration Portal</h3>
+        <p>Web platform managing tourism business registrations - Published & Live</p>
+        <small>Click to view details</small>
+      </div>
+      <div class="project-card" onclick="openProjectModal('pos')">
+        <img src="image/project5.png" alt="Project 5" class="project-img">
+        <h3>Wellserve Cooperative POS System</h3>
+        <p>Desktop application for membership management and financial tracking (90% - Discontinued)</p>
+        <small>Click to view details</small>
       </div>
     </div>
   </section>
@@ -64,11 +84,16 @@
   <section id="skills">
     <h2>Skills</h2>
     <ul class="skills-list">
-      <li>HTML & CSS</li>
-      <li>JavaScript</li>
-      <li>React</li>
-      <li>Java</li>
-      <li>Game developer</li>
+      <li>HTML & CSS(beginner)</li>
+      <li>JavaScript(beginner)</li>
+      <li>React(beginner)</li>
+      <li>Java(beginner)</li>
+      <li>Game developer(beginner)</li>
+      <li>System thinker</li>
+      <li>Problem-solving</li>
+      <li>Resourcefulness</li>
+      <li>AI prompt engineering (advanced - AI-assisted development)</li>
+      <li>Pressure handling </li>
     </ul>
   </section>
 
@@ -80,9 +105,28 @@
     <p><b>LinkedIn:</b> <a href="#">linkedin.com/in/yourprofile</a></p>
   </section>
 
+  <!-- Project Details Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeProjectModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+      <img id="lightboxImage" src="" alt="Zoomed Image">
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 YourName. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
