@@ -190,7 +190,7 @@ function openProjectModal(projectId) {
   if (project.link) {
     htmlContent += `
       <div class="modal-section">
-        <h3>🔗 Live Demo</h3>
+        <h3>🔗 Live </h3>
         <p><a href="${project.link}" target="_blank" style="color: #00ffd5; text-decoration: none; font-weight: bold; padding: 0.5rem 1rem; background: rgba(0, 255, 166, 0.2); border-radius: 5px; display: inline-block; border: 1px solid #00ffd5;">${project.link}</a></p>
       </div>
     `;
